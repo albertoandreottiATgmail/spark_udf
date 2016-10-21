@@ -29,7 +29,7 @@ object UdfTest {
       .format("com.databricks.spark.csv")
       .option("header", "true") // Use first line of all files as header
       .option("inferSchema", "true") // Automatically infer data types
-      .load("/home/jose/Downloads/fuzzy_join.csv")
+      .load("fuzzy_join.csv")
     firstDf.registerTempTable("first")
 
     val secondDf = sqlContext.read
